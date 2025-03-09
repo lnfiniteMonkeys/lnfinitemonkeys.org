@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/dark-theme.css">
+    <link rel="stylesheet" href="/css/dark-theme.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>lnfinite Monkeys</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
-<body style="background-color: #1a1a1a; color: #e0e0e0;">
-    Hello, lnfinite World!
+<body>
+    <h1>Hello, lnfinite World!</h1>
+    <script>
+        window.onload = () => {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        };
+    </script>
 </body>
 </html>
