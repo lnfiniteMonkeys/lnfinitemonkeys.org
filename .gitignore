@@ -1,0 +1,6 @@
+docs/
+.cpcache/
+resources/public/js/compiled/
+resources/public/css/compiled/
+.lsp/
+.clj-kondo/.cache/

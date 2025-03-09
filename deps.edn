@@ -1,0 +1,9 @@
+;; filepath: deps.edn
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojurescript {:mvn/version "1.11.121"}
+        com.bhauman/figwheel-main {:mvn/version "0.2.18"}}
+ :aliases
+ {:dev {:extra-paths ["target" "dev"]
+        :extra-deps {com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}}}
+  :build {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}
+  :release {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-co" "{:output-to \"docs/js/compiled/main.js\" :output-dir \"docs/js/compiled\" :asset-path \"js/compiled\" :main weare.lnfinitemonkeys.core}" "-c"]}}}

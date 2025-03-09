@@ -1,0 +1,5 @@
+;; filepath: dev.cljs.edn
+{:main weare.lnfinitemonkeys.core
+ :output-to "resources/public/js/compiled/main.js"
+ :output-dir "resources/public/js/compiled"
+ :asset-path "js/compiled"}
