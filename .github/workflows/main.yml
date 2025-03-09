@@ -29,8 +29,8 @@ jobs:
         with:
           cli: latest
 
-      - name: Build ClojureScript
-        run: clojure -M:release
+      - name: Build ClojureScript and prepare site
+        run: ./build.sh
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -38,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          path: 'resources/public'
+          path: 'docs'
           include-hidden-files: true
 
       - name: Deploy to GitHub Pages
