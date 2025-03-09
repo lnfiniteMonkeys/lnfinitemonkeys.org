@@ -20,22 +20,11 @@
             opacity: 1;
         }
     </style>
+    <!-- Removed the base href tag as it can cause issues with GitHub Pages -->
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script>
-        // Dynamically determine the correct path for the script
-        (function() {
-            var scriptPath = 'js/compiled/main.js';
-            var script = document.createElement('script');
-            script.src = scriptPath;
-            script.type = 'text/javascript';
-            script.onerror = function() {
-                console.error('Failed to load script from: ' + scriptPath);
-            };
-            document.body.appendChild(script);
-        })();
-    </script>
+    <script src="js/compiled/main.js" type="text/javascript"></script>
     <h1>Hello, lnfinite World!</h1>
     <img src="assets/monkey.webp" alt="Monkey" class="monkey-image">
 </body>
