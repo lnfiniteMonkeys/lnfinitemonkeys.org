@@ -25,6 +25,14 @@ jobs:
       - name: Build ClojureScript and prepare site
         run: ./build.sh
 
+      - name: Clean up deployment artifacts
+        run: |
+          # Remove any problematic files that might cause deployment issues
+          find docs -type l -delete  # Remove symlinks
+          find docs -type p -delete  # Remove named pipes
+          find docs -type s -delete  # Remove sockets
+          chmod -R +r docs/          # Ensure all files are readable
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
